@@ -8,12 +8,8 @@ import java.util.List;
 
 public class DiscountImperative {
 
-
-
 	public BigDecimal apply(List<BigDecimal> list) {
 		BigDecimal totalOfDiscountedPrices = ZERO;
-
-
 		for (BigDecimal price : list) {
 			if (price.compareTo(valueOf(20)) > 0){
 				totalOfDiscountedPrices =
@@ -23,8 +19,4 @@ public class DiscountImperative {
 
 		return totalOfDiscountedPrices;
 	}
-
-
-
-
 }
