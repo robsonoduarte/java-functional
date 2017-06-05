@@ -1,6 +1,5 @@
 apply plugin: 'java'
 
-
 repositories {
     jcenter()
 }
@@ -8,4 +7,3 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
 }
-
