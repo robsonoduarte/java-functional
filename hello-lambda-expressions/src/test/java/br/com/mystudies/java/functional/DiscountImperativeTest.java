@@ -20,9 +20,6 @@ public class DiscountImperativeTest {
 		discountImperative = new DiscountImperative();
 	}
 
-
-
-
 	@Test
 	public void test() {
 	 final List<BigDecimal> list = asList(
@@ -33,7 +30,4 @@ public class DiscountImperativeTest {
 
 	  assertEquals(valueOf(67.5), discountImperative.apply(list));
 	}
-
-
-
 }
