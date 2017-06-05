@@ -20,9 +20,6 @@ public class DiscountFunctionalTest {
 		discountFunctional = new DiscountFunctional();
 	}
 
-
-
-
 	@Test
 	public void test() {
 	 final List<BigDecimal> list = asList(
@@ -33,8 +30,4 @@ public class DiscountFunctionalTest {
 
 	  assertEquals(valueOf(67.5), discountFunctional.apply(list));
 	}
-
-
-
-
 }
