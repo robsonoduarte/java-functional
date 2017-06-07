@@ -24,7 +24,6 @@ public class IteratingThroughAList {
 		}
 
 		// foreach() of Interable interface ( since java 8 ) with the anonymous inner class
-
 		friends.forEach(new Consumer<String>() {
 			@Override
 			public void accept(final String name) {
@@ -46,10 +45,6 @@ public class IteratingThroughAList {
 		// with method reference
 		friends.forEach(System.out::println);
 
-
 	}
-
-
-
 
 }
