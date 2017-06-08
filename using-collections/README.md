@@ -4,3 +4,4 @@ In this project we explore the use of lambda expressions to manipulate collectio
 
 * [Iterating through a List](https://github.com/robsonoduarte/java-functional/blob/master/using-collections/src/main/java/br/com/mystudies/java/functional/IteratingThroughAList.java)
 * [Transforming a List](https://github.com/robsonoduarte/java-functional/blob/master/using-collections/src/main/java/br/com/mystudies/java/functional/TransformingAList.java)
+* [Finding Elements](https://github.com/robsonoduarte/java-functional/blob/master/using-collections/src/main/java/br/com/mystudies/java/functional/FindingElements.java)
