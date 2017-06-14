@@ -8,7 +8,6 @@ import java.util.List;
 
 public class FindingElements {
 
-
 	public static void main(String[] args) {
 
 		final List<String> friends =
@@ -36,6 +35,5 @@ public class FindingElements {
 
 		System.out.println(startsWithN2);
 	}
-
 
  }
