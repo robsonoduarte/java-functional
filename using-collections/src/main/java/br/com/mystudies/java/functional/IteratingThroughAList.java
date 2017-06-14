@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 
 public class IteratingThroughAList {
 
-
 	public static void main(String[] args) {
 
 		final List<String> friends =
@@ -44,7 +43,5 @@ public class IteratingThroughAList {
 
 		// with method reference
 		friends.forEach(System.out::println);
-
 	}
-
 }
