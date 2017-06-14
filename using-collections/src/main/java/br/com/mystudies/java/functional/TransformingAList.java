@@ -40,8 +40,6 @@ public class TransformingAList {
 			.map(String::toUpperCase)
 			.forEach(name -> System.out.print(name + " "));
 
-
 	}
-
 
 }
