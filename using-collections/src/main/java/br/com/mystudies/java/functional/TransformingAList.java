@@ -41,5 +41,4 @@ public class TransformingAList {
 			.forEach(name -> System.out.print(name + " "));
 
 	}
-
 }
