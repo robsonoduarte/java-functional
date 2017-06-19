@@ -44,4 +44,6 @@ public class IteratingThroughAList {
 		// with method reference
 		friends.forEach(System.out::println);
 	}
+	
+	
 }
