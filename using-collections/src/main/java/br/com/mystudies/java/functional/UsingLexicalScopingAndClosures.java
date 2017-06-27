@@ -28,7 +28,7 @@ public class UsingLexicalScopingAndClosures {
 		// Removing Duplication with Lexical Scoping
 
 
-		// the full sintaxe
+		// the full syntax
 /*		final Function<String, Predicate<String>> startsWithLetter =
 				(String letter) -> {
 					Predicate<String> checkstarts = (String name) -> name.startsWith(letter);
