@@ -3,6 +3,7 @@ package br.com.mystudies.java.functional;
 import static java.util.Arrays.asList;
 
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class UsingLexicalScopingAndClosures {
@@ -26,15 +27,26 @@ public class UsingLexicalScopingAndClosures {
 
 		// Removing Duplication with Lexical Scoping
 
-		System.out.println(friends.stream().filter(startsWith("B")).count());
-		System.out.println(friends.stream().filter(startsWith("N")).count());
+
+		// the full sintaxe
+/*		final Function<String, Predicate<String>> startsWithLetter =
+				(String letter) -> {
+					Predicate<String> checkstarts = (String name) -> name.startsWith(letter);
+					return checkstarts;
+				};*/
+
+		// using the lambda function
+		final Function<String, Predicate<String>> startsWithLetter = letter -> name -> name.startsWith(letter);
+
+		System.out.println(friends.stream().filter(startsWithLetter.apply("B")).count());
+		System.out.println(friends.stream().filter(startsWithLetter.apply("N")).count());
+
+
 
 
 	}
 
 
-	public static Predicate<String> startsWith(final String letter){
-		return name -> name.startsWith(letter);
-	}
+
 
 }
