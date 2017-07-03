@@ -11,4 +11,5 @@ public class ReducingACollectionToASingleValue {
 		final List<String> friends =
 				asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
 	}
+
 }
