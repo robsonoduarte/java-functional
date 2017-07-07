@@ -1,6 +1,7 @@
 package br.com.mystudies.java.functional;
 
 import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.joining;
 
 import java.util.List;
 
@@ -30,8 +31,14 @@ public class JoiningElements {
 		// use the method add in String in Java 8
 		System.out.println(String.join(", ", friends));
 
-		
-		
+
+
+		// using the stream + join method ( another form of reduce )
+		System.out.println(
+			friends.stream()
+				.map(String::toUpperCase)
+				.collect(joining(", ")));
+
 	}
 
 }
