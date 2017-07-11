@@ -1,5 +1,6 @@
 package br.com.mystudies.java.functional;
 
+import static java.lang.Character.isDigit;
 import static java.lang.Character.valueOf;
 
 public class IteratingAString {
@@ -18,14 +19,23 @@ public class IteratingAString {
 			.forEach(IteratingAString::printChar);
 
 
-		// map the int to char
+		// map to object -> of int to char
 		str.chars()
 			.mapToObj(ch -> valueOf((char)ch))
 			.forEach(System.out::println);
 
 
-		
+		// using filter in stream
 
+		str.chars()
+			.filter(ch -> isDigit(ch))
+			.forEach(ch -> printChar(ch));
+
+
+		// use the reference methods
+		str.chars()
+			.filter(Character::isDigit)
+			.forEach(IteratingAString::printChar);
 
 	}
 
