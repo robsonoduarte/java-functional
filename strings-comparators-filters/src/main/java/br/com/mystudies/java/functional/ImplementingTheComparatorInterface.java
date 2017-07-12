@@ -14,8 +14,8 @@ public class ImplementingTheComparatorInterface {
 		final List<Person> people = asList(
 					new Person("John", 20),
 					new Person("Sara", 21),
-					new Person("John", 21),
-					new Person("John", 35)
+					new Person("Jane", 21),
+					new Person("Creg", 35)
 				);
 
 
