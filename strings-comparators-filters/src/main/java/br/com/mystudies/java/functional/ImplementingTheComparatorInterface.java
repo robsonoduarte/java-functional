@@ -27,8 +27,24 @@ public class ImplementingTheComparatorInterface {
 
 		printPeople("Sorted in ascending order by age: ", ascendingAge);
 
-	}
 
+
+		// sorting in descending
+		List<Person> descending = people.stream()
+			.sorted((p1,p2) -> p2.ageDifference(p1))
+			.collect(toList());
+
+
+		printPeople("Sorted in descending order by age: ", descending);
+
+
+
+
+
+
+
+
+	}
 
 
 
