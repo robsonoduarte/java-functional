@@ -3,6 +3,7 @@ package br.com.mystudies.java.functional;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class ImplementingTheComparatorInterface {
@@ -38,13 +39,13 @@ public class ImplementingTheComparatorInterface {
 		printPeople("Sorted in descending order by age: ", descending);
 
 
+		// Reusing the comparator
 
-
-
-
-
+		Comparator<Person> compareAscending = (p1,p2) -> p1.ageDifference(p2);
+		Comparator<Person> compareDescending = compareAscending.reversed();
 
 	}
+
 
 
 
