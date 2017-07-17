@@ -45,6 +45,4 @@ public class ReducingACollectionToASingleValue {
 		System.out.println("Steve or Longer -> " + steveOrLonger);
 
 	}
-
-
 }
