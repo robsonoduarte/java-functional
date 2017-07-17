@@ -45,8 +45,4 @@ public class IteratingAString {
 		System.out.println((char)aChar);
 	}
 
-
-
-
-
 }
