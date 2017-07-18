@@ -39,10 +39,8 @@ public class IteratingThroughAList {
 
 		// compiler treats single-parameter lambda expression as special
 		friends.forEach(name -> System.out.println(name));
-
-
+		
 		// with method reference
 		friends.forEach(System.out::println);
-	}
-	
+	}	
 }
