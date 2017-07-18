@@ -71,6 +71,12 @@ public class ImplementingTheComparatorInterface {
 			.min(Person::ageDifference)
 			.ifPresent(youngest -> System.out.println("Youngest: " + youngest));
 
+
+		// use the max method
+		people.stream()
+			.max(Person::ageDifference)
+			.ifPresent(eldest -> System.out.println("Youngest: " + eldest));
+
 	}
 
 
