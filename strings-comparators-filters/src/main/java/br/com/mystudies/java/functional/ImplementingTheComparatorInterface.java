@@ -29,18 +29,17 @@ public class ImplementingTheComparatorInterface {
 		printPeople("Sorted in ascending order by age: ", ascendingAge);
 
 
-
 		// sorting in descending
-		List<Person> descending = people.stream()
-			.sorted((p1,p2) -> p2.ageDifference(p1))
-			.collect(toList());
+		List<Person> descending =
+				people.stream()
+					.sorted((p1,p2) -> p2.ageDifference(p1))
+					.collect(toList());
 
 
 		printPeople("Sorted in descending order by age: ", descending);
 
 
 		// Reusing the comparator with reversed default method
-
 		Comparator<Person> compareAscending = (p1,p2) -> p1.ageDifference(p2);
 		Comparator<Person> compareDescending = compareAscending.reversed();
 
@@ -58,7 +57,20 @@ public class ImplementingTheComparatorInterface {
 			);
 
 
+		// sorting by name
+		printPeople("Sorted in ascending order by name: ",
+				people.stream()
+					.sorted((p1,p2) -> p1.getName().compareTo(p2.getName()))
+					.collect(toList())
+			);
+
+
+
 	}
+
+
+
+
 
 
 
