@@ -39,10 +39,24 @@ public class ImplementingTheComparatorInterface {
 		printPeople("Sorted in descending order by age: ", descending);
 
 
-		// Reusing the comparator
+		// Reusing the comparator with reversed default method
 
 		Comparator<Person> compareAscending = (p1,p2) -> p1.ageDifference(p2);
 		Comparator<Person> compareDescending = compareAscending.reversed();
+
+
+		printPeople("Sorted in ascending order by age:",
+				people.stream()
+					.sorted(compareAscending)
+					.collect(toList())
+			);
+
+		printPeople("Sorted in descending order by age:",
+				people.stream()
+					.sorted(compareDescending)
+					.collect(toList())
+			);
+
 
 	}
 
