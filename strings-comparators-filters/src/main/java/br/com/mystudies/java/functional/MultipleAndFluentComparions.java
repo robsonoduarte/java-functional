@@ -35,6 +35,12 @@ public class MultipleAndFluentComparions {
 
 
 
+		// using multiple comparator
+		printPeople("Sorted in ascending order by age and name",
+				people.stream()
+					.sorted(comparing(Person::getAge).thenComparing(Person::getName))
+					.collect(toList())
+			);
 
 
 	}
