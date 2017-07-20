@@ -29,7 +29,7 @@ public class MultipleAndFluentComparions {
 		// more fluent express using the functions in the comparator
 		printPeople("Sorted in descending order by age",
 				people.stream()
-					.sorted(comparing(Person::getName)) // using the method reference is is like use the -> final Function<Person, String> byName = person -> person.getName();
+					.sorted(comparing(Person::getName)) // using the method reference  is like use the -> final Function<Person, String> byName = person -> person.getName();
 					.collect(toList())
 			);
 
