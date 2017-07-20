@@ -4,3 +4,4 @@ In this project we'll use lambada expressions and method reference to iterate ov
 
 * [Iterating a String](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/IteratingAString.java)
 * [Implementing the Comparator Interface](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/ImplementingTheComparatorInterface.java)
+* [Multiple and Fluent Comparisons](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/MultipleAndFluentComparions.java)
