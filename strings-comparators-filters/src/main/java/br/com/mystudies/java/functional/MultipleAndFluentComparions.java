@@ -1,6 +1,7 @@
 package br.com.mystudies.java.functional;
 
 import static java.util.Arrays.asList;
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
 import java.util.List;
@@ -25,8 +26,13 @@ public class MultipleAndFluentComparions {
 		);
 
 
-
 		// more fluent express using the functions in the comparator
+		printPeople("Sorted in descending order by age",
+				people.stream()
+					.sorted(comparing(Person::getName)) // using the method reference is is like use the -> final Function<Person, String> byName = person -> person.getName();
+					.collect(toList())
+			);
+
 
 
 
