@@ -21,15 +21,29 @@ public class UsingTheCollectMethodAndTheCollectorsClass {
 
 
 		// collect  using mutability and forEach()
-
-		final List<Person> olderThan20 = new ArrayList<>();
+		final List<Person> list1 = new ArrayList<>();
 
 		people.stream()
 			.filter(p -> p.getAge() > 20)
-			.forEach(p -> olderThan20.add(p));
+			.forEach(p -> list1.add(p));
 
 
-		System.out.println("People older than 20: " + olderThan20);
+		System.out.println("People older than 20: " + list1);
+
+
+		// using the collect method to take the list without mutability
+		List<Person> list2 =
+				people.stream()
+					.filter(p -> p.getAge() > 20)
+					.collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+
+		System.out.println("People older than 20: " + list2);
+
+
+
+
+
+
 
 	}
 
