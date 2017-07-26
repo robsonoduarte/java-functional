@@ -78,7 +78,6 @@ public class UsingTheCollectMethodAndTheCollectorsClass {
 
 
 		// Group by first letter and reduce with the maximum age
-
 		Map<Character, Optional<Person>> oldestPersonOfEachLetter =
 				people.stream()
 					.collect(groupingBy(p -> p.getName().charAt(0), reducing(maxBy(comparing(Person::getAge)))));
