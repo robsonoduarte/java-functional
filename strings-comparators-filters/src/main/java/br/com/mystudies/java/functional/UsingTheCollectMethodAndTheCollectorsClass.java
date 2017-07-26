@@ -2,6 +2,7 @@ package br.com.mystudies.java.functional;
 
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.mapping;
 import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
@@ -62,6 +63,13 @@ public class UsingTheCollectMethodAndTheCollectorsClass {
 
 
 
+
+		// get the only Person's name with one downstream
+		Map<Integer, List<String>> nameOfPeopleByAge =
+				people.stream()
+				.collect(groupingBy(Person::getAge, mapping(Person::getName, toList())));
+
+		System.out.println("People grouped by age : " + nameOfPeopleByAge);
 
 
 	}
