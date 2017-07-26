@@ -9,12 +9,12 @@ public class ListingAllFilesInADirectory {
 
 	public static void main(String[] args) throws IOException {
 
-		// list all file in current directory
+		// list all files in current directory
 		Files.list(get("."))
 			.forEach(System.out::println);
 
 
-		// using one filter
+		// using one filter to get only directories
 		Files.list(get("."))
 			.filter(Files::isDirectory)
 			.forEach(System.out::println);
