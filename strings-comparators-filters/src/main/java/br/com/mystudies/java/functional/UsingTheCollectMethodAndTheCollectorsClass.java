@@ -1,9 +1,12 @@
 package br.com.mystudies.java.functional;
 
 import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class UsingTheCollectMethodAndTheCollectorsClass {
 
@@ -40,12 +43,48 @@ public class UsingTheCollectMethodAndTheCollectorsClass {
 		System.out.println("People older than 20: " + list2);
 
 
+		// using the collect method and Collectors.toList
+		List<Person> list3 =
+				people.stream()
+					.filter(p -> p.getAge() > 20)
+					.collect(toList());
+
+		System.out.println("People older than 20: " + list3);
+
+
+
+		// using the collect method and Collectors.groupingBy
+		Map<Integer, List<Person>> peopleByAge =
+				people.stream()
+				.collect(groupingBy(Person::getAge));
+
+		System.out.println("Grouped by age : " + peopleByAge);
 
 
 
 
 
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
