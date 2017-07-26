@@ -1,13 +1,17 @@
 package br.com.mystudies.java.functional;
 
 import static java.util.Arrays.asList;
+import static java.util.Comparator.comparing;
+import static java.util.function.BinaryOperator.maxBy;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.mapping;
+import static java.util.stream.Collectors.reducing;
 import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class UsingTheCollectMethodAndTheCollectorsClass {
 
@@ -71,6 +75,15 @@ public class UsingTheCollectMethodAndTheCollectorsClass {
 
 		System.out.println("People grouped by age : " + nameOfPeopleByAge);
 
+
+
+		// Group by first letter and reduce with the maximum age
+
+		Map<Character, Optional<Person>> oldestPersonOfEachLetter =
+				people.stream()
+					.collect(groupingBy(p -> p.getName().charAt(0), reducing(maxBy(comparing(Person::getAge)))));
+
+		System.out.println("Oldest person of each letter " + oldestPersonOfEachLetter);
 
 	}
 
