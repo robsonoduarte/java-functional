@@ -15,28 +15,26 @@ public class ListingSelectFilesInADirectory {
 	public static void main(String[] args) throws IOException {
 
 
+		final String resources = "./src/main/resources";
+
+
 		// use File.list with Filter in anonymous class syntax
-		final String[] files1 =
-			new File("./src/main/resources").list(new FilenameFilter() {
+		print(
+			new File(resources).list(new FilenameFilter() {
 				@Override
 				public boolean accept(File dir, String name) {
 					return name.endsWith(".txt");
 				}
-			});
-
-		asList(files1).forEach(System.out::println);
+			}));
 
       // change to the lambda
-		String[] files2 =
-				new File("./src/main/resources").list((dir,name) -> name.endsWith(".txt"));
-
-		asList(files2).forEach(System.out::println);
+		print(new File(resources).list((dir,name) -> name.endsWith(".txt")));
 
 	//--------------------------------------------------------------------------------------------------
 
 
 	 // using the Files.newDirectoryStream with anonymous class syntax
-		Files.newDirectoryStream(get("./src/main/resources"),
+		Files.newDirectoryStream(get(resources),
 			new DirectoryStream.Filter<Path>(){
 				@Override
 				public boolean accept(Path path) throws IOException {
@@ -47,7 +45,7 @@ public class ListingSelectFilesInADirectory {
 
 	  // change to the lambda
 		Files.newDirectoryStream(
-				get("./src/main/resources"),p -> p.toString().endsWith(".txt")
+				get(resources),p -> p.toString().endsWith(".txt")
 			).forEach(System.out::println);
 
 
@@ -55,6 +53,15 @@ public class ListingSelectFilesInADirectory {
 	//--------------------------------------------------------------------------------------------------
 
 
+	// get files based on the properties with one FileFilter ( only using the lambda expression )
+		print(new File(resources).listFiles(file -> file.isHidden()));
+
+
+	// change to the method reference
+		print(new File(resources).listFiles(File::isHidden));
+
+
+	}
 
 
 
@@ -64,6 +71,26 @@ public class ListingSelectFilesInADirectory {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private static void print(File[] files) {
+		asList(files).forEach(System.out::println);
+	}
+
+	private static void print(final String[] files) {
+		asList(files).forEach(System.out::println);
 	}
 
 
