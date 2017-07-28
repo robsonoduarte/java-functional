@@ -13,10 +13,8 @@ import java.nio.file.Path;
 public class ListingSelectFilesInADirectory {
 
 	public static void main(String[] args) throws IOException {
-
-
+		
 		final String resources = "./src/main/resources";
-
 
 		// use File.list with Filter in anonymous class syntax
 		print(
@@ -27,13 +25,13 @@ public class ListingSelectFilesInADirectory {
 				}
 			}));
 
-      // change to the lambda
+      		// change to the lambda
 		print(new File(resources).list((dir,name) -> name.endsWith(".txt")));
 
 	//--------------------------------------------------------------------------------------------------
 
 
-	 // using the Files.newDirectoryStream with anonymous class syntax
+	 	// using the Files.newDirectoryStream with anonymous class syntax
 		Files.newDirectoryStream(get(resources),
 			new DirectoryStream.Filter<Path>(){
 				@Override
@@ -43,7 +41,7 @@ public class ListingSelectFilesInADirectory {
 		}).forEach(System.out::println);
 
 
-	  // change to the lambda
+	  	// change to the lambda
 		Files.newDirectoryStream(
 				get(resources),p -> p.toString().endsWith(".txt")
 			).forEach(System.out::println);
@@ -53,13 +51,12 @@ public class ListingSelectFilesInADirectory {
 	//--------------------------------------------------------------------------------------------------
 
 
-	// get files based on the properties with one FileFilter ( only using the lambda expression )
+		// get files based on the properties with one FileFilter ( only using the lambda expression )
 		print(new File(resources).listFiles(file -> file.isHidden()));
 
 
-	// change to the method reference
+		// change to the method reference
 		print(new File(resources).listFiles(File::isHidden));
-
 
 	}
 
