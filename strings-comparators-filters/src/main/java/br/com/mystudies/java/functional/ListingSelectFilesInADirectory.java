@@ -11,8 +11,7 @@ public class ListingSelectFilesInADirectory {
 
 
 		// use File.list with Filter in anonymous class sintaxe
-
-		String[] files =
+		final String[] files1 =
 			new File("./src/main/resources").list(new FilenameFilter() {
 				@Override
 				public boolean accept(File dir, String name) {
@@ -20,9 +19,13 @@ public class ListingSelectFilesInADirectory {
 				}
 			});
 
-		asList(files).forEach(System.out::println);
+		asList(files1).forEach(System.out::println);
 
+      // change to the lambda
+		String[] files2 =
+				new File("./src/main/resources").list((dir,name) -> name.endsWith(".txt"));
 
+		asList(files2).forEach(System.out::println);
 
 
 
