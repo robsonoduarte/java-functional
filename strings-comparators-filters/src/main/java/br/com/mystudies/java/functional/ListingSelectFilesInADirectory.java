@@ -30,7 +30,6 @@ public class ListingSelectFilesInADirectory {
 
 	//--------------------------------------------------------------------------------------------------
 
-
 	 	// using the Files.newDirectoryStream with anonymous class syntax
 		Files.newDirectoryStream(get(resources),
 			new DirectoryStream.Filter<Path>(){
@@ -49,7 +48,6 @@ public class ListingSelectFilesInADirectory {
 
 
 	//--------------------------------------------------------------------------------------------------
-
 
 		// get files based on the properties with one FileFilter ( only using the lambda expression )
 		print(new File(resources).listFiles(file -> file.isHidden()));
@@ -89,6 +87,4 @@ public class ListingSelectFilesInADirectory {
 	private static void print(final String[] files) {
 		asList(files).forEach(System.out::println);
 	}
-
-
 }
