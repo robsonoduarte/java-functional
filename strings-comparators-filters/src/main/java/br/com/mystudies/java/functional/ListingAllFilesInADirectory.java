@@ -13,11 +13,9 @@ public class ListingAllFilesInADirectory {
 		Files.list(get("."))
 			.forEach(System.out::println);
 
-
 		// using one filter to get only directories
 		Files.list(get("."))
 			.filter(Files::isDirectory)
 			.forEach(System.out::println);
-
 	}
 }
