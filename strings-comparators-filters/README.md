@@ -9,3 +9,4 @@ In this project we'll use lambada expressions and method reference to iterate ov
 * [Listing All Files in a Directory](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/ListingAllFilesInADirectory.java)
 * [Listing Select Files in a Directory](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/ListingSelectFilesInADirectory.java)
 * [Listing Immediate Subdirectories Using flatMap](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/ListingImmediateSubdirectoriesUsingFlatMap.java)
+* [Watching a File Change](https://github.com/robsonoduarte/java-functional/blob/master/strings-comparators-filters/src/main/java/br/com/mystudies/java/functional/WatchingAFileChange.java)
