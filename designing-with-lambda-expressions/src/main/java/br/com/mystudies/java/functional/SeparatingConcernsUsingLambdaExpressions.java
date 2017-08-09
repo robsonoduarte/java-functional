@@ -20,7 +20,9 @@ public class SeparatingConcernsUsingLambdaExpressions {
 		);
 
 		System.out.println("Total of all assets: " + totalAssetValues(assets));
+		System.out.println("Total of all bonds: " + totalBondValues(assets));
 	}
+
 
 
 
@@ -32,6 +34,15 @@ public class SeparatingConcernsUsingLambdaExpressions {
 					.mapToInt(Asset::value)
 					.sum();
 	}
+
+
+	public static int totalBondValues(final List<Asset> assets){
+		return assets.stream()
+					.filter(asset -> BOND.equals(asset.type()))
+					.mapToInt(Asset::value)
+					.sum();
+	}
+
 
 
 
