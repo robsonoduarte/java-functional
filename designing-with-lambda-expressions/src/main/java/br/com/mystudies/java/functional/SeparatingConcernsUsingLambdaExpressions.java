@@ -42,16 +42,16 @@ public class SeparatingConcernsUsingLambdaExpressions {
 	// METHODS THE SAME CONCERNS
 	public static int totalAssetValues(final List<Asset> assets){
 		return assets.stream()
-					.mapToInt(Asset::value)
-					.sum();
+				.mapToInt(Asset::value)
+				.sum();
 	}
 
 
 	public static int totalBondValues(final List<Asset> assets){
 		return assets.stream()
-					.filter(asset -> BOND.equals(asset.type()))
-					.mapToInt(Asset::value)
-					.sum();
+				.filter(asset -> BOND.equals(asset.type()))
+				.mapToInt(Asset::value)
+				.sum();
 	}
 
 
@@ -69,9 +69,9 @@ public class SeparatingConcernsUsingLambdaExpressions {
 	// Refactoring the methods above in one only method that receives the lambda expression
 	public static int totalAssetValues(final List<Asset> assets, final Predicate<Asset> assetSelector){
 		return assets.stream()
-					.filter(assetSelector)
-					.mapToInt(Asset::value)
-					.sum();
+				.filter(assetSelector)
+				.mapToInt(Asset::value)
+				.sum();
 	}
 
 
