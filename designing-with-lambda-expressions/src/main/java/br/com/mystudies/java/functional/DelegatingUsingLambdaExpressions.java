@@ -9,8 +9,8 @@ public class DelegatingUsingLambdaExpressions {
 
 
 	public static void main(String[] args) {
-
 	}
+
 
 
 
@@ -23,19 +23,17 @@ public class DelegatingUsingLambdaExpressions {
 			this.priceFinder = priceFinder;
 		}
 
-
 		public BigDecimal computeStockWorth(final String ticker, final int shares){
 			return priceFinder.apply(ticker).multiply(valueOf(shares));
 		}
-
 	}
 
 
 
 
+	public class GoogleFinance{
 
-
-
+	}
 
 
 }
