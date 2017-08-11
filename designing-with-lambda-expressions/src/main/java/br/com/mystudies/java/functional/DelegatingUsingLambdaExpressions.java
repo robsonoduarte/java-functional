@@ -9,13 +9,16 @@ public class DelegatingUsingLambdaExpressions {
 
 
 	public static void main(String[] args) {
+		CalculateNAV calculateNAV = new CalculateNAV(GoogleFinance::getPrice);
+
+		System.out.println(calculateNAV.computeStockWorth("GOOG", 100));
 	}
 
 
 
 
 
-	public class CalculateNAV{
+	public static class CalculateNAV{
 
 		private Function<String, BigDecimal> priceFinder;
 
@@ -33,7 +36,7 @@ public class DelegatingUsingLambdaExpressions {
 
 	public static class GoogleFinance{
 		public static BigDecimal getPrice(final String ticker){
-			return valueOf(0.0);
+			return valueOf(10.0);
 		}
 
 		//"http://www.google.com/finance/historical?q=${symbol}&startdate=${yesterday}&output=csv"
