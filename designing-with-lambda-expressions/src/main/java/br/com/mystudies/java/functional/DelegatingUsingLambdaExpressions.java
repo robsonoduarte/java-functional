@@ -31,8 +31,12 @@ public class DelegatingUsingLambdaExpressions {
 
 
 
-	public class GoogleFinance{
+	public static class GoogleFinance{
+		public static BigDecimal getPrice(final String ticker){
+			return valueOf(0.0);
+		}
 
+		//"http://www.google.com/finance/historical?q=${symbol}&startdate=${yesterday}&output=csv"
 	}
 
 
