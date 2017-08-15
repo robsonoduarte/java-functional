@@ -19,5 +19,4 @@ public class Asset {
 		return value;
 	}
 
-
 }
