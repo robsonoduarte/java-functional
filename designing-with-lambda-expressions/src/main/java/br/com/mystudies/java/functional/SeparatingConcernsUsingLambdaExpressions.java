@@ -60,9 +60,6 @@ public class SeparatingConcernsUsingLambdaExpressions {
 	}
 
 
-
-
-
 	// Refactoring the methods above in one only method that receives the lambda expression
 	public static int totalAssetValues(final List<Asset> assets, final Predicate<Asset> assetSelector){
 		return assets.stream()
