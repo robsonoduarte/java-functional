@@ -33,6 +33,7 @@ public class DelegatingUsingLambdaExpressions {
 
 
 
+
 	public static class GoogleFinance{
 		public static BigDecimal getPrice(final String ticker){
 			return valueOf(10.0);
