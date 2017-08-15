@@ -25,13 +25,10 @@ public class SeparatingConcernsUsingLambdaExpressions {
 		System.out.println("Total of all bonds: " + totalBondValues(assets));
 		System.out.println("Total of all stock: " + totalStockValues(assets));
 
-
-
 		//Refactoring to Separate a Key Concern
 		System.out.println("Total of all assets: " + totalAssetValues(assets, asset -> true));
 		System.out.println("Total of all bonds: " + totalAssetValues(assets, asset -> BOND.equals(asset.type())));
 		System.out.println("Total of all stocks: " + totalAssetValues(assets, asset -> STOCK.equals(asset.type())));
-
 	}
 
 
@@ -73,7 +70,4 @@ public class SeparatingConcernsUsingLambdaExpressions {
 				.mapToInt(Asset::value)
 				.sum();
 	}
-
-
-
 }
