@@ -22,14 +22,12 @@ public class ReusingLambdaExpressions {
 				asList("Kate","Ken", "Nick", "Paula", "Zach");
 
 
-
 		// USING THE 3 LAMBADA EXPRESSION IN WITCH STREAM
 
 		long countFriendsStartN =
 				friends.stream()
 					.filter(name -> name.startsWith("N"))
 					.count();
-
 
 		long countEditorsStartN =
 				editors.stream()
@@ -72,5 +70,4 @@ public class ReusingLambdaExpressions {
 		System.out.println(countComradesStartN);
 
 	}
-
 }
