@@ -30,7 +30,6 @@ public class IteratingThroughAList {
 			}
 		});
 
-
 		// foreach() with lambda expression
 		friends.forEach((final String name) -> System.out.println(name));
 
