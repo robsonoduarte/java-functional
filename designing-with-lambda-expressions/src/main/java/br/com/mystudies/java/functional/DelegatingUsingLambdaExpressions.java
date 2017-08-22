@@ -26,8 +26,6 @@ public class DelegatingUsingLambdaExpressions {
 
 
 
-
-
 	public static class CalculateNAV{
 
 		private Function<String, BigDecimal> priceFinder;
@@ -38,12 +36,9 @@ public class DelegatingUsingLambdaExpressions {
 		}
 
 		public BigDecimal computeStockWorth(final String ticker, final int shares){
-			return priceFinder.apply(ticker).multiply(valueOf(shares));
+			return priceFinder.apply(ticker).multiply(valueOf(shares)); // use the function
 		}
 	}
-
-
-
 
 
 	public static class GoogleFinance{
