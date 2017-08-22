@@ -6,8 +6,11 @@ import static java.time.LocalDate.now;
 import static java.time.format.DateTimeFormatter.ofPattern;
 import static java.util.Locale.US;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
+import java.net.URL;
 import java.util.function.Function;
 
 public class DelegatingUsingLambdaExpressions {
@@ -39,32 +42,35 @@ public class DelegatingUsingLambdaExpressions {
 
 
 
+
 	public static class GoogleFinance{
 		public static BigDecimal getPrice(final String ticker){
 
-
 			try {
-				final String x =
-				"http://www.google.com/finance/historical?q=" + ticker + "&startdate=" + yesterday() + "&output=csv";
+				final URL url = new URL("http://www.google.com/finance/historical?q=" + ticker + "&startdate=" + yesterday() + "&output=csv");
 
-				System.out.println(x);
+				BufferedReader reader =
+						new BufferedReader(new InputStreamReader(url.openStream()));
 
-				/*final URL url = new URL("http://www.google.com/finance/historical?q=${symbol}&startdate=${yesterday}&output=csv");*/
+				final String[] dataItems =
+						reader.lines()
+							.skip(1)
+							.findFirst()
+							.get()
+							.split(",");
 
-				return valueOf(10.0);
+
+				return new BigDecimal(dataItems[dataItems.length - 2]);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
 			}
 		}
 
-
-
-
 		private static String yesterday() throws UnsupportedEncodingException {
 			return encode(now().minusDays(1).format(ofPattern("MMM d, yyyy",US)),"UTF-8");
 		}
-
-
 	}
+
+
 
 }
