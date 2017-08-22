@@ -19,7 +19,6 @@ public class JoiningElements {
 		}
 		System.out.println();
 
-
 		// To remove the comma at the end
 		for (int i = 0; i < friends.size() - 1; i++) {
 			System.out.print(friends.get(i) + ", ");
@@ -31,8 +30,6 @@ public class JoiningElements {
 		// use the method add in String in Java 8
 		System.out.println(String.join(", ", friends));
 
-
-
 		// using the stream + join method ( another form of reduce )
 		System.out.println(
 			friends.stream()
@@ -40,5 +37,4 @@ public class JoiningElements {
 				.collect(joining(", ")));
 
 	}
-
 }

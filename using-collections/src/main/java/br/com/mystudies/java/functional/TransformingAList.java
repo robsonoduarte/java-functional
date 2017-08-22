@@ -13,7 +13,6 @@ public class TransformingAList {
 				asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
 
 
-
 		// imperative style
 		final List<String> upperCaseNames = new ArrayList<String>();
 
@@ -27,8 +26,7 @@ public class TransformingAList {
 		friends.forEach(name -> upperCaseNames.add(name.toUpperCase()));
 		System.out.println(upperCaseNames);
 
-
-
+		
 		// using lambda expressions with Stream interface and no explicit mutation
 		friends.stream()
 			.map(name -> name.toUpperCase())
@@ -39,6 +37,5 @@ public class TransformingAList {
 		friends.stream()
 			.map(String::toUpperCase)
 			.forEach(name -> System.out.print(name + " "));
-
 	}
 }
