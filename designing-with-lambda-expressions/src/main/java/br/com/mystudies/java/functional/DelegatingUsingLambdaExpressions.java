@@ -1,5 +1,6 @@
 package br.com.mystudies.java.functional;
 
+import static java.lang.String.format;
 import static java.math.BigDecimal.valueOf;
 import static java.net.URLEncoder.encode;
 import static java.time.LocalDate.now;
@@ -21,7 +22,7 @@ public class DelegatingUsingLambdaExpressions {
 		// use the method reference to give the function to constructor
 		CalculateNAV calculateNAV = new CalculateNAV(GoogleFinance::getPrice);
 
-		System.out.println(calculateNAV.computeStockWorth("GOOG", 100));
+		System.out.println(format("100 shares of Google worth: $%.2f", calculateNAV.computeStockWorth("GOOG", 100))  );
 	}
 
 
