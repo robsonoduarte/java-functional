@@ -43,6 +43,7 @@ public class DelegatingUsingLambdaExpressions {
 
 
 	public static class GoogleFinance{
+
 		public static BigDecimal getPrice(final String ticker){
 
 			try {
