@@ -18,5 +18,4 @@ public class Asset {
 	public int value(){
 		return value;
 	}
-
 }
