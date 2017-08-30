@@ -59,7 +59,6 @@ public class DelegatingUsingLambdaExpressions {
 							.get()
 							.split(",");
 
-
 				return new BigDecimal(dataItems[dataItems.length - 2]);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
