@@ -12,7 +12,6 @@ public class JoiningElements {
 		final List<String> friends =
 				asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
 
-
 		// Using only the old JDK libraries
 		for (String friend : friends) {
 			System.out.print(friend +  ", ");
@@ -25,7 +24,6 @@ public class JoiningElements {
 		}
 		if(friends.size() > 0)
 			System.out.println(friends.get(friends.size() - 1));
-
 
 		// use the method add in String in Java 8
 		System.out.println(String.join(", ", friends));
