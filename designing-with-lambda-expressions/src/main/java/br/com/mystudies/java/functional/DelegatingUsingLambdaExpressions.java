@@ -39,9 +39,7 @@ public class DelegatingUsingLambdaExpressions {
 
 
 	public static class GoogleFinance{
-
 		public static BigDecimal getPrice(final String ticker){
-
 			try {
 				final URL url = new URL("http://www.google.com/finance/historical?q=" + ticker + "&startdate=" + yesterday() + "&output=csv");
 
