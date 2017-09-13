@@ -1,6 +1,9 @@
 package br.com.mystudies.java.functional;
 
+import static java.lang.String.format;
+
 import java.awt.Color;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -9,6 +12,14 @@ public class DecoratingUsingLambdaExpressions {
 
 
 	public static void main(String[] args) {
+		final Camera camera  = new Camera();
+
+		final Consumer<String> printCaptured = (filterInfo) ->
+			System.out.println(format("with %s : %s", filterInfo, camera.capture(new Color(200, 100, 200))));
+
+
+
+		printCaptured.accept("no filters");
 	}
 
 
@@ -17,7 +28,6 @@ public class DecoratingUsingLambdaExpressions {
 
 	public static class Camera{
 		private Function<Color, Color> filter;
-
 
 		public Camera(){
 			setFilters();
