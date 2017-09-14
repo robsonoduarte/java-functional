@@ -12,7 +12,6 @@ import java.util.function.Predicate;
 public class SeparatingConcernsUsingLambdaExpressions {
 
 	public static void main(String[] args) {
-
 		final List<Asset> assets = asList(
 				new Asset(BOND, 1000),
 				new Asset(BOND, 2000),
@@ -40,7 +39,6 @@ public class SeparatingConcernsUsingLambdaExpressions {
 				.sum();
 	}
 
-
 	public static int totalBondValues(final List<Asset> assets){
 		return assets.stream()
 				.filter(asset -> BOND.equals(asset.type()))
@@ -48,14 +46,12 @@ public class SeparatingConcernsUsingLambdaExpressions {
 				.sum();
 	}
 
-
 	public static int totalStockValues(final List<Asset> assets){
 		return assets.stream()
 				.filter(asset -> STOCK.equals(asset.type()))
 				.mapToInt(Asset::value)
 				.sum();
 	}
-
 
 	// Refactoring the methods above in one only method that receives the lambda expression
 	public static int totalAssetValues(final List<Asset> assets, final Predicate<Asset> assetSelector){
