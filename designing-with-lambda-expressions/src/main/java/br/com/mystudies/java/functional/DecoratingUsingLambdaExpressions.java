@@ -28,9 +28,7 @@ public class DecoratingUsingLambdaExpressions {
 	public static class Camera{
 		private Function<Color, Color> filter;
 
-		public Camera(){
-			setFilters();
-		}
+		public Camera(){setFilters();}
 		
 		public Color capture(final Color inputColor){
 			return filter.apply(inputColor);
