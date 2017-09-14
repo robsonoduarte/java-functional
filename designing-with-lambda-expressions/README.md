@@ -4,3 +4,4 @@ In this project We'll use lambda expressions to easily separate logic from funct
 
 * [Separating Concerns Using Lambda Expressions](https://github.com/robsonoduarte/java-functional/blob/master/designing-with-lambda-expressions/src/main/java/br/com/mystudies/java/functional/SeparatingConcernsUsingLambdaExpressions.java)
 * [Delegating Using Lambda Expressions](https://github.com/robsonoduarte/java-functional/blob/master/designing-with-lambda-expressions/src/main/java/br/com/mystudies/java/functional/DelegatingUsingLambdaExpressions.java)
+* [Decorating Using Lambda Expressions](https://github.com/robsonoduarte/java-functional/blob/master/designing-with-lambda-expressions/src/main/java/br/com/mystudies/java/functional/DecoratingUsingLambdaExpressions.java)
