@@ -9,8 +9,6 @@ import java.util.stream.Stream;
 
 public class DecoratingUsingLambdaExpressions {
 
-
-
 	public static void main(String[] args) {
 		final Camera camera  = new Camera();
 
@@ -20,8 +18,6 @@ public class DecoratingUsingLambdaExpressions {
 		camera.setFilters(Color::brighter, Color::darker);
 		printCaptured.accept("no filters");
 	}
-
-
 
 
 
@@ -40,5 +36,4 @@ public class DecoratingUsingLambdaExpressions {
 					.orElse(color -> color);
 		}
 	}
-
 }
