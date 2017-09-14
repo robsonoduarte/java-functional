@@ -31,16 +31,15 @@ public class DecoratingUsingLambdaExpressions {
 		public Camera(){
 			setFilters();
 		}
-
+		
 		public Color capture(final Color inputColor){
 			return filter.apply(inputColor);
 		}
 
-
 		public void setFilters(final Function<Color,Color>... filters){
 			filter = Stream.of(filters)
-						.reduce((filter,next) -> filter.compose(next))
-						.orElse(color -> color);
+					.reduce((filter,next) -> filter.compose(next))
+					.orElse(color -> color);
 		}
 	}
 
