@@ -19,8 +19,6 @@ public class DecoratingUsingLambdaExpressions {
 
 		camera.setFilters(Color::brighter, Color::darker);
 		printCaptured.accept("no filters");
-
-
 	}
 
 
@@ -35,23 +33,15 @@ public class DecoratingUsingLambdaExpressions {
 		}
 
 		public Color capture(final Color inputColor){
-			final Color processedColor = filter.apply(inputColor);
-			return processedColor;
+			return filter.apply(inputColor);
 		}
 
 
 		public void setFilters(final Function<Color,Color>... filters){
-			filter =
-					Stream.of(filters)
-					.reduce((filter,next) -> filter.compose(next))
-					.orElse(color -> color);
+			filter = Stream.of(filters)
+						.reduce((filter,next) -> filter.compose(next))
+						.orElse(color -> color);
 		}
-
 	}
-
-
-
-
-
 
 }
