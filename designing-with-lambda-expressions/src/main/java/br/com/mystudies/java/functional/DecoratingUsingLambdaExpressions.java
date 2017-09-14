@@ -17,9 +17,10 @@ public class DecoratingUsingLambdaExpressions {
 		final Consumer<String> printCaptured = (filterInfo) ->
 			System.out.println(format("with %s : %s", filterInfo, camera.capture(new Color(200, 100, 200))));
 
-
-
+		camera.setFilters(Color::brighter, Color::darker);
 		printCaptured.accept("no filters");
+
+
 	}
 
 
