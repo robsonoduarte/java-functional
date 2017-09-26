@@ -22,6 +22,7 @@ public class DecoratingUsingLambdaExpressions {
 
 
 	public static class Camera{
+		
 		private Function<Color, Color> filter;
 
 		public Camera(){setFilters();}
@@ -29,7 +30,7 @@ public class DecoratingUsingLambdaExpressions {
 		public Color capture(final Color inputColor){
 			return filter.apply(inputColor);
 		}
-
+		
 		public void setFilters(final Function<Color,Color>... filters){
 			filter = Stream.of(filters)
 					.reduce((filter,next) -> filter.compose(next))
