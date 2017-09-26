@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 public class DecoratingUsingLambdaExpressions {
 
 	public static void main(String[] args) {
+		
 		final Camera camera  = new Camera();
 
 		final Consumer<String> printCaptured = (filterInfo) ->
