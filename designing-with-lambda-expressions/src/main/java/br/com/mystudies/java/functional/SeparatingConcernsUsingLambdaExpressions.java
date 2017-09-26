@@ -31,7 +31,6 @@ public class SeparatingConcernsUsingLambdaExpressions {
 	}
 
 
-
 	// METHODS THE SAME CONCERNS
 	public static int totalAssetValues(final List<Asset> assets){
 		return assets.stream()
