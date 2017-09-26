@@ -16,6 +16,7 @@ public class JoiningElements {
 		for (String friend : friends) {
 			System.out.print(friend +  ", ");
 		}
+		
 		System.out.println();
 
 		// To remove the comma at the end
