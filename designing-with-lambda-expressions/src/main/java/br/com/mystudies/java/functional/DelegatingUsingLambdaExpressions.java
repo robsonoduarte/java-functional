@@ -16,14 +16,11 @@ import java.util.function.Function;
 
 public class DelegatingUsingLambdaExpressions {
 
-
 	public static void main(String[] args) {
 		// use the method reference to give the function to constructor
 		CalculateNAV calculateNAV = new CalculateNAV(GoogleFinance::getPrice);
 		System.out.println(format("100 shares of Google worth: $%.2f", calculateNAV.computeStockWorth("GOOG", 100))  );
 	}
-
-
 
 	public static class CalculateNAV{
 		private Function<String, BigDecimal> priceFinder;
