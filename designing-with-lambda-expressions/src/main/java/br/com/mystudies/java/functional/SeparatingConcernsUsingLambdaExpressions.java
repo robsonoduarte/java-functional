@@ -58,5 +58,4 @@ public class SeparatingConcernsUsingLambdaExpressions {
 				.mapToInt(Asset::value)
 				.sum();
 	}
-	
 }
