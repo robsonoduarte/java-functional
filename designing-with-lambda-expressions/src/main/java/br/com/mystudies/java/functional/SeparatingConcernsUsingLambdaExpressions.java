@@ -30,7 +30,6 @@ public class SeparatingConcernsUsingLambdaExpressions {
 		System.out.println("Total of all stocks: " + totalAssetValues(assets, asset -> STOCK.equals(asset.type())));
 	}
 
-
 	// METHODS THE SAME CONCERNS
 	public static int totalAssetValues(final List<Asset> assets){
 		return assets.stream()
@@ -59,4 +58,5 @@ public class SeparatingConcernsUsingLambdaExpressions {
 				.mapToInt(Asset::value)
 				.sum();
 	}
+	
 }
