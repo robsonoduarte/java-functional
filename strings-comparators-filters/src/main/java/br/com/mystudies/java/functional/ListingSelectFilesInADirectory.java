@@ -46,7 +46,6 @@ public class ListingSelectFilesInADirectory {
 			).forEach(System.out::println);
 
 
-
 	//--------------------------------------------------------------------------------------------------
 
 		// get files based on the properties with one FileFilter ( only using the lambda expression )
@@ -57,20 +56,6 @@ public class ListingSelectFilesInADirectory {
 		print(new File(resources).listFiles(File::isHidden));
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
