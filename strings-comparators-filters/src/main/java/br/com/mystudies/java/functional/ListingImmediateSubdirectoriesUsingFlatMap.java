@@ -20,8 +20,6 @@ public class ListingImmediateSubdirectoriesUsingFlatMap {
 
 
 
-
-
     // list files in the imperative style
 	public static void listInImperativeSytle(){
 		List<File> files = new ArrayList<>();
@@ -52,22 +50,6 @@ public class ListingImmediateSubdirectoriesUsingFlatMap {
 			.collect(toList())
 			.forEach(System.out::println);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
