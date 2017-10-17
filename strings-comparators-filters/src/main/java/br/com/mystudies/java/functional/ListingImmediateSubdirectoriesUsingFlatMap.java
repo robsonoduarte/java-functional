@@ -38,8 +38,6 @@ public class ListingImmediateSubdirectoriesUsingFlatMap {
 	}
 
 
-
-
 	// list files in functional style using the flatmap method.
 	public static void listInFunctionalStyle(){
 		of(new File(".").listFiles())
@@ -47,6 +45,5 @@ public class ListingImmediateSubdirectoriesUsingFlatMap {
 			.collect(toList())
 			.forEach(System.out::println);
 	}
-
 
 }
