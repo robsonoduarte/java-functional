@@ -18,4 +18,5 @@ public class ListingAllFilesInADirectory {
 			.filter(Files::isDirectory)
 			.forEach(System.out::println);
 	}
+	
 }
