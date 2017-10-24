@@ -13,11 +13,9 @@ public class IteratingAString {
 		str.chars()
 			.forEach(System.out::println);
 
-
 		// print the letter
 		str.chars()
 			.forEach(IteratingAString::printChar);
-
 
 		// map to object -> of int to char
 		str.chars()
