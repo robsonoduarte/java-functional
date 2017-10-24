@@ -22,9 +22,7 @@ public class WatchingAFileChange {
 
 		path.register(watchService, ENTRY_MODIFY);
 
-
 		System.out.println("Report any file changed within next 1 minute...");
-
 
 		WatchKey watchKey =
 				watchService.poll(1, TimeUnit.MINUTES);
