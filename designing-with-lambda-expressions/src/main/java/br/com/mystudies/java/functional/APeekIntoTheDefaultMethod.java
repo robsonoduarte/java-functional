@@ -22,9 +22,7 @@ public class APeekIntoTheDefaultMethod {
 	
 	
 	class SeaPlane extends Vehicle implements FastFly, Sail{
-		 
-		 
-		 
+		
 		private int altitude;	
 		/* 
 		 * the compiler will force implement the cruise() method, 
