@@ -27,9 +27,5 @@ public class DealingWithExceptions {
 				}
 			}).forEach(System.out::println);
 
-
-
-
-
 	}
 }
