@@ -17,10 +17,9 @@ public class PeekingIntTheProblem {
 		}
 		
 		
-		// use try-with-resources 
+		// use try-with-resources ( the close method will call automatically )
 		try(final FileWriteARM writeARM = new FileWriteARM("peekaboo.txt")){
-			writeARM.writeStuff("peek a boo");
-			
+			writeARM.writeStuff("peek a boo");			
 			System.out.println("done with the resource");
 		}
 		
@@ -62,6 +61,7 @@ public class PeekingIntTheProblem {
 			
 			@Override
 			public void close() throws IOException {
+				System.out.println("close called automatically...");
 				writer.close();
 			}		
 		}
