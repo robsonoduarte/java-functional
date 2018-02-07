@@ -6,9 +6,16 @@ import java.io.IOException;
 public class UsingLambdaExpressionToCleanUpResources {
 
 	
+	public static void main(String[] args) throws IOException {		
+		FileWriterEAM.use("eam.xt", writeEAM -> {
+			writeEAM.writeStuff("how");
+			writeEAM.writeStuff("sweet");
+		});
+	}
 	
 	
-	
+
+
 	
 	public static class FileWriterEAM{
 		
@@ -24,11 +31,36 @@ public class UsingLambdaExpressionToCleanUpResources {
 			writer.close();
 		}
 				
-		private void writeStuff(final String message) throws IOException {
+		public void writeStuff(final String message) throws IOException {
 			writer.write(message);
 		}
 		
 		
+		
+		// EAM method ( execute around method )
+		public static void use(final String fileName, final UseInstance<FileWriterEAM, IOException> block) throws IOException {
+			
+			final FileWriterEAM writerEAM = new FileWriterEAM(fileName);
+			
+			try {
+				block.accept(writerEAM);
+			} finally {
+				writerEAM.close();
+			}
+		}
+		
 	}
+	
+	
+	
+	@FunctionalInterface
+	public interface UseInstance<T, X extends Throwable>{
+		void accept(T instance) throws X;
+	}
+	
+	
+	
+	
+	
 	
 }
