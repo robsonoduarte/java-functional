@@ -5,7 +5,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ManagingLocks {
 
-	
 	public static class Locking{
 
 		private Lock lock = new ReentrantLock();
