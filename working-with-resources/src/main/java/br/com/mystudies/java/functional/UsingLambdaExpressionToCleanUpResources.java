@@ -14,9 +14,6 @@ public class UsingLambdaExpressionToCleanUpResources {
 	}
 	
 	
-
-
-	
 	public static class FileWriterEAM{
 		
 		private final FileWriter writer;
@@ -57,10 +54,6 @@ public class UsingLambdaExpressionToCleanUpResources {
 	public interface UseInstance<T, X extends Throwable>{
 		void accept(T instance) throws X;
 	}
-	
-	
-	
-	
 	
 	
 }
