@@ -12,8 +12,7 @@ public class UsingLambdaExpressionToCleanUpResources {
 			writeEAM.writeStuff("sweet");
 		});
 	}
-	
-	
+		
 	public static class FileWriterEAM{
 		
 		private final FileWriter writer;
