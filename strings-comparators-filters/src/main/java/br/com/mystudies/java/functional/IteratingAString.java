@@ -24,7 +24,6 @@ public class IteratingAString {
 
 
 		// using filter in stream
-
 		str.chars()
 			.filter(ch -> isDigit(ch))
 			.forEach(ch -> printChar(ch));
