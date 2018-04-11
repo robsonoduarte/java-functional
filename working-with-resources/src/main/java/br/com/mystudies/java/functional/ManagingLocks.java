@@ -11,7 +11,7 @@ public class ManagingLocks {
 		
 		public void doOp() {
 			Locker.runLocked(lock, () ->  {/*Critial code*/});
-		}			
+		}
 	}
 	
 	
@@ -25,5 +25,6 @@ public class ManagingLocks {
 			}
 		}
 	}
+	
 	
 }
