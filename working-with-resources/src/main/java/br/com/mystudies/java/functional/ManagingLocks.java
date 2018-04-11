@@ -24,9 +24,5 @@ public class ManagingLocks {
 				lock.unlock();
 			}
 		}
-	}
-	
-	public void temp(){}
-	public void temp5() {}
-	
+	}	
 }
