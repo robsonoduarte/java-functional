@@ -13,6 +13,7 @@ public class UsingLambdaExpressionToCleanUpResources {
 		});
 	}
 	
+		
 	public static class FileWriterEAM{
 		
 		private final FileWriter writer;
