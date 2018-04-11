@@ -14,6 +14,7 @@ public class ManagingLocks {
 		}			
 	}
 	
+	
 	public static class Locker{
 		public static void runLocked(Lock lock, Runnable block) {
 			lock.lock();			
