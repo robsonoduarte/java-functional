@@ -16,7 +16,6 @@ public class PeekingIntoTheProblem {
 			writeExample.close(); // but if we don't call the close method the resource ( FileWrite ) will open.
 		}
 		
-		
 		// use try-with-resources ( the close method will call automatically )
 		try(final FileWriteARM writeARM = new FileWriteARM("peekaboo.txt")){
 			writeARM.writeStuff("peek a boo");			
