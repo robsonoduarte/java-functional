@@ -32,7 +32,6 @@ public class UsingLambdaExpressionToCleanUpResources {
 		}
 		
 		
-		
 		// EAM method ( execute around method )
 		public static void use(final String fileName, final UseInstance<FileWriterEAM, IOException> block) throws IOException {
 			
