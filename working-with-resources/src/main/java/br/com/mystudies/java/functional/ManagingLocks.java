@@ -27,4 +27,7 @@ public class ManagingLocks {
 	}
 	
 	
+	
+	public void temp2() {}
+	
 }
