@@ -20,7 +20,9 @@ public class PeekingIntoTheProblem {
 		try(final FileWriteARM writeARM = new FileWriteARM("peekaboo.txt")){
 			writeARM.writeStuff("peek a boo");			
 			System.out.println("done with the resource");
-		}		
+		}
+		
+		
 	}
 	
 	
