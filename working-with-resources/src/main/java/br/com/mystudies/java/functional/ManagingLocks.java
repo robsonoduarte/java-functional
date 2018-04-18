@@ -9,6 +9,7 @@ public class ManagingLocks {
 
 		private Lock lock = new ReentrantLock();
 		
+		
 		public void doOp() {
 			Locker.runLocked(lock, () ->  {/*Critial code*/});
 		}
