@@ -52,5 +52,4 @@ public class UsingLambdaExpressionToCleanUpResources {
 		void accept(T instance) throws X;
 	}
 	
-	
 }
