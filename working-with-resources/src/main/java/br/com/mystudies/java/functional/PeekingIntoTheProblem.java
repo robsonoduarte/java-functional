@@ -21,8 +21,7 @@ public class PeekingIntoTheProblem {
 			writeARM.writeStuff("peek a boo");			
 			System.out.println("done with the resource");
 		}
-		
-		
+			
 	}
 	
 	
