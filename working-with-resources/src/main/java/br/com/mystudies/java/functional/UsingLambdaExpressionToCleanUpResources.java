@@ -5,7 +5,6 @@ import java.io.IOException;
 
 public class UsingLambdaExpressionToCleanUpResources {
 
-	
 	public static void main(String[] args) throws IOException {		
 		FileWriterEAM.use("eam.xt", writeEAM -> {
 			writeEAM.writeStuff("how");
