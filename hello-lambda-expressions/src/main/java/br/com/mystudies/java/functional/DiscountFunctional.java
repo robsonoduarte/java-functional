@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class DiscountFunctional {
-
 	public BigDecimal apply(List<BigDecimal> list) {
 		return list.stream()
 			.filter(p -> p.compareTo(valueOf(20)) > 0)
